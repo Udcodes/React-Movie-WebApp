@@ -1,16 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledHeroImage = styled.div`
   background: ${props =>
     `linear-gradient(
-      to bottom, rgba(0,0,0,0)
-      39%,rgba(0,0,0,0)
-      41%,rgba(0,0,0,0.65)
-      100%
-    ),
-    url('${props.image}'), #1c1c1c`};
-  background-size: 100%, cover !important;
-  background-position: center, center !important;
+    to bottom, rgba(0,0,0,0)
+    39%, rgba(0,0,0,0)
+    41%, rgba(0,0,0,0.8)
+    100%
+  ),
+  url('${props.image}'), #1c1c1c`};
+  background-size: 100%, cover;
+  background-position: center, center;
   width: 100%;
   height: 600px;
   position: relative;
@@ -29,12 +29,11 @@ export const StyledHeroImage = styled.div`
     bottom: 40px;
     margin-right: 20px;
     min-height: 100px;
-    background: rgba(0, 0, 0, 0);
     color: #fff;
 
     h1 {
-      font-family: 'Abel', sans-serif;
-      font-size: 48px;
+      font-family: "Inter", sans-serif;
+      font-size: 2rem;
       color: #fff;
 
       @media screen and (max-width: 720px) {
@@ -44,13 +43,13 @@ export const StyledHeroImage = styled.div`
     }
 
     p {
-      font-family: 'Abel', sans-serif;
-      font-size: 22px;
+      font-family: "Inter", sans-serif;
+      font-size: 1.5rem;
       line-height: 26px;
       color: #fff;
 
-      @media screen and (max-width: 720px) {
-        font-size: 16px;
+      @media screen and (max-width: 700px) {
+        font-size: 1rem;
         line-height: 20px;
         color: #fff;
       }
