@@ -33,18 +33,18 @@ export const StyledHeroImage = styled.div`
 
     h1 {
       font-family: "Inter", sans-serif;
-      font-size: 2rem;
+      font-size: 3rem;
       color: #fff;
 
       @media screen and (max-width: 720px) {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
         color: #fff;
       }
     }
 
     p {
       font-family: "Inter", sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 26px;
       color: #fff;
 
