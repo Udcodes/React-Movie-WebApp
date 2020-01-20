@@ -19,6 +19,8 @@ import Spinner from "./elements/Spinner";
 //CUSTOM HOOK
 import { useHomeFetch } from "./hooks/useHomeFetch";
 
+import NoImage from "./images/no_image.jpg";
+
 const Home = () => {
   const [{ state, loading, error }, fetchMovies] = useHomeFetch();
   console.log(state);
