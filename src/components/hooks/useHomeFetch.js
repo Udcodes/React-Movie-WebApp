@@ -25,6 +25,8 @@ export const useHomeFetch = () => {
     }
     setLoading(false);
   };
+
+  // fetch popular movies initially on mount
   useEffect(() => {
     fetchMovies(`${API_URL}movie/popular?api_key=${API_KEY}`);
   }, []);
