@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   API_URL,
   API_KEY,
@@ -23,6 +23,7 @@ import NoImage from "./images/no_image.jpg";
 
 const Home = () => {
   const [{ state, loading, error }, fetchMovies] = useHomeFetch();
+  const [searchTerm, setSearchTerm] = useState("");
   console.log(state);
   if (error) return <div>Oops! Something went wrong...</div>;
   if (!state.movies[0]) return <Spinner />;
@@ -35,7 +36,7 @@ const Home = () => {
         text={state.heroImage.overview}
       />
       <SearchBar />
-      <Grid />
+      <Grid header={searchTerm ? "Search Result" : "Popular movies"}></Grid>
       <MovieThumb />
       <Spinner />
       <LoadMoreBtn />
