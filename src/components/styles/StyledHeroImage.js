@@ -37,7 +37,7 @@ export const StyledHeroImage = styled.div`
       color: #fff;
 
       @media screen and (max-width: 720px) {
-        font-size: 38px;
+        font-size: 2.2rem;
         color: #fff;
       }
     }
@@ -48,7 +48,7 @@ export const StyledHeroImage = styled.div`
       line-height: 26px;
       color: #fff;
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 720px) {
         font-size: 1rem;
         line-height: 20px;
         color: #fff;

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { StyledHeroImage } from "../styles/StyledHeroImage";
 
 const HeroImage = ({ image, title, text }) => (
