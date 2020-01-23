@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import FontAwesome from "react-fontawesome";
 
 import { StyledSearchBar, StyledSearchBarContent } from "../styles/StyledSearchBar";
-import FontAwesome from "react-fontawesome";
 
 const SearchBar = ({ callback }) => {
   const [state, setState] = useState("");
@@ -11,10 +10,10 @@ const SearchBar = ({ callback }) => {
   const doSearch = event => {
     const { value } = event.target;
 
-    clearTimeout(timeout.current);
+    clearTimeout(timeOut.current);
     setState(value);
 
-    timeout.current = setTimeout(() => {
+    timeOut.current = setTimeout(() => {
       callback(value);
     }, 500);
   };
