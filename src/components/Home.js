@@ -56,7 +56,6 @@ const Home = () => {
           />
         ))}
       </Grid>
-      <MovieThumb />
       <Spinner />
       <LoadMoreBtn />
     </React.Fragment>
