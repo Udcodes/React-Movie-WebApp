@@ -67,7 +67,9 @@ const Home = () => {
         ))}
       </Grid>
       {loading && <Spinner />}
-      <LoadMoreBtn text="Load More" callback={loadMoreMovies} />
+      {currentPage < totalPages && !loading && (
+        <LoadMoreBtn text="Load More" callback={loadMoreMovies} />
+      )}
     </React.Fragment>
   );
 };
