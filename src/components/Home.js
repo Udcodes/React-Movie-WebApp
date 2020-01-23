@@ -32,6 +32,16 @@ const Home = () => {
   ] = useHomeFetch();
   const [searchTerm, setSearchTerm] = useState("");
 
+  const loadMoreMovies = () => {
+    const searchEndPoint = `${API_URL}search/movie?api_key=${API_KEY}&query=${searchTerm}&page=${currentPage +
+      1}`;
+    const popularEndPoint = `${API_URL}movie/popular?api_key=${API_KEY}&page=${currentPage + 1}`;
+
+    const endpoint = searchTerm ? searchEndPoint : popularEndPoint;
+
+    fetchMovies(endpoint);
+  };
+
   if (error) return <div>Oops! Something went wrong... </div>;
   if (!movies[0]) return <Spinner />;
 
@@ -56,8 +66,8 @@ const Home = () => {
           />
         ))}
       </Grid>
-      <Spinner />
-      <LoadMoreBtn />
+      {loading && <Spinner />}
+      <LoadMoreBtn text="Load More" callback={loadMoreMovies} />
     </React.Fragment>
   );
 };
