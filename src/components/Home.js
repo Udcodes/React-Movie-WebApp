@@ -32,6 +32,8 @@ const Home = () => {
   ] = useHomeFetch();
   const [searchTerm, setSearchTerm] = useState("");
 
+  const searchMovies = search => {};
+
   const loadMoreMovies = () => {
     const searchEndPoint = `${API_URL}search/movie?api_key=${API_KEY}&query=${searchTerm}&page=${currentPage +
       1}`;
