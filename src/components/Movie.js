@@ -13,15 +13,17 @@ import { useMovieFetch } from "./hooks/useMovieFetch";
 const Movie = ({ movieId }) => {
   const [state, loading, error] = useMovieFetch(movieId);
   console.log(state);
+
+  if (error) return <div>Something went wrong...</div>;
+  if (loading) return <Spinner />;
   return (
     <React.Fragment>
-      <Navigation />
-      <MovieInfo />
+      <Navigation movie={state.original_title} />
+      <MovieInfo movie={state} />
       <MovieInfoBar />
       <Grid>
         <Actor />
       </Grid>
-      <Spinner />
     </React.Fragment>
   );
 };
