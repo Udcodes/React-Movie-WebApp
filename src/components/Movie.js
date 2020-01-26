@@ -16,15 +16,18 @@ const Movie = ({ movieId }) => {
 
   if (error) return <div>Something went wrong...</div>;
   if (loading) return <Spinner />;
+
   return (
-    <React.Fragment>
+    <>
       <Navigation movie={state.original_title} />
       <MovieInfo movie={state} />
-      <MovieInfoBar />
-      <Grid>
-        <Actor />
+      <MovieInfoBar time={state.runtime} budget={state.budget} revenue={state.revenue} />
+      <Grid header="Actors">
+        {state.actors.map(actor => (
+          <Actor key={actor.credit_id} actor={actor} />
+        ))}
       </Grid>
-    </React.Fragment>
+    </>
   );
 };
 export default Movie;
