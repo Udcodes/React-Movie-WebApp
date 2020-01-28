@@ -16,7 +16,6 @@ const Movie = ({ movieId }) => {
 
   if (error) return <div>Something went wrong...</div>;
   if (loading) return <Spinner />;
-  if (!loading) return " ";
 
   return (
     <>
